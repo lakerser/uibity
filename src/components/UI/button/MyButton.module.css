@@ -5,5 +5,27 @@
     background: transparent;
     border:1px solid teal;
     cursor: pointer;
+    -webkit-box-shadow: 0 6px 3px rgba(0, 0, 0, 0.54);
+border-radius: 15px;
+    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
+
+}
+
+.myBtn:hover{
+    background-color: teal;
+    color: white;
+
+}
+
+.myBtn:active{
+    background-color: #008f8f;
+
+
+    top: 3px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.54);
+    position: relative;
+
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.54);
 
 }

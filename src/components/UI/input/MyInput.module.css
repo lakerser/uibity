@@ -5,3 +5,6 @@
     border: 1px solid teal ;
 
 }
+.myInput:focus{
+    box-shadow: 0 0 15px cornflowerblue;
+}
