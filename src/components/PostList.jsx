@@ -1,13 +1,13 @@
 import React from 'react';
 import PostItem from "./postItem";
 
-const PostList = ({post,textH}) => {
+const PostList = ({post,textH,remove}) => {
     return (
         <div>
             <h1 style={{textAlign:"center"}}>{textH}</h1>
-            {post.map((post,index) =>
+            {post.map((post1,index) =>
                 <div>
-                    <PostItem number={index + 1} post={post} key={post.id}/>
+                    <PostItem remove={remove} number={index + 1} post1={post1} key={post1.id}/>
                 </div>
             )}
         </div>

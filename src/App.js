@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, {useState} from 'react'
 import './styles/app.css'
 import PostList from "./components/PostList";
 import PostForm from "./components/postForm";
@@ -11,17 +11,25 @@ function App() {
         {id: 4, title: 'jsx', body: 'description'}
 
     ])
+    const removePost = (post1) => {
+        setPosts(posts.filter(p => p.id !== post1.id))
+    }
 
-
-const createPost = (newPost)=>{
-        setPosts([...posts,newPost])
-}
+    const createPost = (newPost) => {
+        setPosts([...posts, newPost])
+    }
 
 
     return (
         <div className="App">
             <PostForm create={createPost}/>
-            <PostList post={posts} textH={'text posts 1'}/>
+            {posts.length !== 0
+                ?
+                <PostList remove={removePost} post={posts} textH={'text posts 1'}/>
+                :
+                <h1 style={{textAlign: "center"}}>
+                    Posts is not here</h1>
+            }
         </div>
     );
 }
