@@ -10,7 +10,7 @@ const PostForm = ({create}) => {
         const  newPost = {
             ...post, id:Date.now()
         }
-        if(newPost.title==='' || newPost.body===''){
+        if(newPost.title==='' && newPost.body===''){
             alert('something is empty')
         }
         else{
